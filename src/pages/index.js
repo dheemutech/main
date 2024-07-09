@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { FAQ } from '@/components/FAQ';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -26,15 +27,15 @@ export default function Home() {
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-800 dark:to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 
-            className="text-5xl font-bold mb-4"
+            className="text-4xl md:text-5xl font-bold mb-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Launch Your Career with NexGen
+            Launch Your Tech Career with NexGen
           </motion.h1>
           <motion.p 
-            className="text-xl mb-8"
+            className="text-lg md:text-xl mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -60,40 +61,38 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Program Structure</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 dark:text-white">Phase 1: Skill Development</h3>
+            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-semibold mb-4 dark:text-white">Phase 1: Skill Development (4 weeks)</h3>
               <ul className="list-disc list-inside space-y-2 dark:text-gray-200">
-                <li>Intensive coding bootcamp</li>
-                <li>Full-stack development fundamentals</li>
-                <li>Python and cloud computing essentials</li>
-                <li>AI and machine learning introduction</li>
+                <li>Week 1-2: Full-stack development fundamentals (HTML, CSS, JavaScript, React)</li>
+                <li>Week 3: Python programming and cloud computing essentials (AWS basics)</li>
+                <li>Week 4: Introduction to AI and machine learning with practical exercises</li>
               </ul>
             </div>
-            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 dark:text-white">Phase 2: Career Preparation</h3>
+            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-semibold mb-4 dark:text-white">Phase 2: Career Preparation (2 weeks)</h3>
               <ul className="list-disc list-inside space-y-2 dark:text-gray-200">
-                <li>Resume building and optimization</li>
-                <li>AI-powered interview practice</li>
-                <li>Soft skills and communication training</li>
-                <li>Industry expert mentorship sessions</li>
+                <li>Day 1-3: Resume building workshop and ATS optimization techniques</li>
+                <li>Day 4-7: AI-powered interview practice sessions (technical and behavioral)</li>
+                <li>Day 8-10: Soft skills training (communication, teamwork, problem-solving)</li>
+                <li>Day 11-14: Industry expert mentorship sessions and networking events</li>
               </ul>
             </div>
-            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 dark:text-white">Phase 3: Project Application</h3>
+            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <h3 className="text-xl font-semibold mb-4 dark:text-white">Phase 3: Project Application (2 months)</h3>
               <ul className="list-disc list-inside space-y-2 dark:text-gray-200">
-                <li>2-month capstone project</li>
-                <li>Real-world problem-solving</li>
-                <li>Collaboration with peers</li>
-                <li>Guidance from industry mentors</li>
+                <li>Week 1-4: Capstone project ideation and planning</li>
+                <li>Week 5-7: Project development with weekly mentor check-ins</li>
+                <li>Week 8: Final project presentations and peer reviews</li>
               </ul>
             </div>
-            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+            <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-semibold mb-4 dark:text-white">Ongoing Support</h3>
               <ul className="list-disc list-inside space-y-2 dark:text-gray-200">
-                <li>Access to exclusive WhatsApp group</li>
-                <li>Job and internship opportunity updates</li>
-                <li>Continuous learning resources</li>
-                <li>Alumni network and events</li>
+                <li>24/7 access to learning resources and coding challenges</li>
+                <li>Bi-weekly webinars on emerging technologies and industry trends</li>
+                <li>Monthly alumni networking events and job fairs</li>
+                <li>Lifetime access to NexGen's exclusive job board and internship postings</li>
               </ul>
             </div>
           </div>
@@ -118,7 +117,7 @@ export default function Home() {
             ].map((feature, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -131,25 +130,63 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="bg-white dark:bg-gray-800 py-20">
+      {/* Success Stories Section */}
+      <section id="success-stories" className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">What Our Students Say</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Success Stories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: "Priya Sharma", text: "NexGen's program was a game-changer for my career. I landed an internship at a top tech company!", image: "/api/placeholder/100/100" },
-              { name: "Rahul Patel", text: "The mentorship and AI interview practice gave me the confidence to ace my interviews.", image: "/api/placeholder/100/100" },
-              { name: "Ananya Gupta", text: "Learning cutting-edge technologies and working on real projects set me apart from other candidates.", image: "/api/placeholder/100/100" },
-              { name: "Vikram Singh", text: "The resume editing service helped me showcase my skills effectively. Highly recommended!", image: "/api/placeholder/100/100" },
-            ].map((testimonial, index) => (
+              {
+                name: "Aarav Patel",
+                role: "Software Engineer at Google",
+                story: "NexGen's program was the turning point in my career. The hands-on projects and mentorship gave me the confidence to apply to top tech companies. I'm now living my dream as a Software Engineer at Google!",
+                image: "/images/aarav.jpg"
+              },
+              {
+                name: "Zara Khan",
+                role: "Data Scientist at Amazon",
+                story: "The AI and ML modules at NexGen opened up a whole new world for me. The practical experience I gained through the program's projects was instrumental in landing my role as a Data Scientist at Amazon.",
+                image: "/images/zara.jpg"
+              },
+            ].map((story, index) => (
               <motion.div 
                 key={index} 
-                className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md flex items-start"
+                className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <img src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mr-4" />
+                <Image src={story.image} alt={story.name} width={100} height={100} className="rounded-full mb-4 md:mb-0 md:mr-6" />
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 dark:text-white">{story.name}</h3>
+                  <p className="text-blue-600 dark:text-blue-400 mb-2">{story.role}</p>
+                  <p className="text-gray-600 dark:text-gray-300">{story.story}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="bg-gray-50 dark:bg-gray-900 py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">What Our Students Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { name: "Priya Sharma", text: "NexGen's program was a game-changer for my career. I landed an internship at a top tech company!", image: "/images/priya.jpg" },
+              { name: "Rahul Patel", text: "The mentorship and AI interview practice gave me the confidence to ace my interviews.", image: "/images/rahul.jpg" },
+              { name: "Ananya Gupta", text: "Learning cutting-edge technologies and working on real projects set me apart from other candidates.", image: "/images/ananya.jpg" },
+              { name: "Vikram Singh", text: "The resume editing service helped me showcase my skills effectively. Highly recommended!", image: "/images/vikram.jpg" },
+            ].map((testimonial, index) => (
+              <motion.div 
+                key={index} 
+                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex items-start hover:shadow-lg transition-shadow duration-300"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Image src={testimonial.image} alt={testimonial.name} width={64} height={64} className="rounded-full mr-4" />
                 <div>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">"{testimonial.text}"</p>
                   <p className="font-semibold dark:text-white">{testimonial.name}</p>
