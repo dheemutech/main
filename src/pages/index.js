@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
+import Head from 'next/head';
 import { Layout } from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { motion, useAnimation } from 'framer-motion';
@@ -10,9 +10,18 @@ import { Sun, Moon } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 // Lazy load components
-const LazyProgramStructure = dynamic(() => import('@/components/ProgramStructure'), { ssr: false });
-const LazyFeatures = dynamic(() => import('@/components/Features'), { ssr: false });
-const LazyTestimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
+const LazyProgramStructure = dynamic(() => import('@/components/ProgramStructure'), { 
+  ssr: false,
+  loading: () => <p>Loading Program Structure...</p>
+});
+const LazyFeatures = dynamic(() => import('@/components/Features'), { 
+  ssr: false,
+  loading: () => <p>Loading Features...</p>
+});
+const LazyTestimonials = dynamic(() => import('@/components/Testimonials'), { 
+  ssr: false,
+  loading: () => <p>Loading Testimonials...</p>
+});
 
 // Lazy load chat widget
 const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false });
@@ -61,6 +70,18 @@ export default function Home() {
 
   return (
     <Layout>
+      <Head>
+        <title>NexGen Internship Program | Launch Your Tech Career</title>
+        <meta name="description" content="Join NexGen's comprehensive internship training program for Indian undergraduates in technology. Boost your career with hands-on experience in full-stack development, AI, ML, and cloud computing." />
+        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, Indian undergraduates" />
+        <meta property="og:title" content="NexGen Internship Program | Launch Your Tech Career" />
+        <meta property="og:description" content="Join NexGen's comprehensive internship training program for Indian undergraduates in technology. Boost your career with hands-on experience." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.nexgeninternship.com" />
+        <meta property="og:image" content="https://www.nexgeninternship.com/og-image.jpg" />
+        <link rel="canonical" href="https://www.nexgeninternship.com" />
+      </Head>
+
       {/* Theme Toggle */}
       <div className="fixed top-4 right-4 z-50">
         <Button
