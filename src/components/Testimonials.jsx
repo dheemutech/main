@@ -6,24 +6,24 @@ const Testimonials = () => {
     {
       name: "Mahesh Reddy",
       role: "Software Engineer at TCS",
-      content: "NexGen's internship program was a game-changer for my career. The hands-on experience and mentorship I received were invaluable.",
+      content: "NexGen's 3-month internship program was a game-changer for my career. The hands-on experience and mentorship I received as a BTech student were invaluable in securing my position at TCS.",
     },
     {
       name: "Aakash Chowary",
       role: "Data Scientist at Cognizant",
-      content: "The AI and ML training I got at NexGen prepared me perfectly for my role at Cognizant. It's an excellent program for aspiring tech professionals.",
+      content: "The AI and ML training I got during NexGen's comprehensive internship prepared me perfectly for my role at Cognizant. It's an excellent program for aspiring BTech graduates in tech.",
     },
     {
-      name: "Ganesh Kumar",
-      role: "Frontend Developer at Tech Mahindra",
-      content: "NexGen's focus on real-world projects and cutting-edge technologies gave me a significant advantage in my job search. Highly recommended!",
+      name: "Priya Sharma",
+      role: "Frontend Developer at Mindtree",
+      content: "NexGen's focus on real-world projects and cutting-edge technologies gave me a significant advantage in my job search. The certified internship certificate was a great addition to my resume!",
     }
   ];
 
   return (
     <section className="py-24 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">What Our Graduates Say</h2>
+        <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">What Our BTech Graduates Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div

@@ -1,24 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Brain, Rocket, Users } from 'lucide-react';
+import { Code, Brain, Rocket, Users, Award } from 'lucide-react';
 
 const ProgramStructure = () => {
   const phases = [
-    { title: "Phase 1: Skill Development", icon: <Code className="w-12 h-12 mb-4 text-blue-600" />, duration: "6 weeks", items: [
+    { title: "Phase 1: Skill Development", icon: <Code className="w-12 h-12 mb-4 text-blue-600" />, duration: "4 weeks", items: [
       "Full-stack development fundamentals aligned with industry standards",
       "Python programming and cloud computing practices used by top Indian tech companies",
       "Introduction to AI and machine learning with real-world applications"
     ]},
-    { title: "Phase 2: Career Preparation", icon: <Brain className="w-12 h-12 mb-4 text-green-600" />, duration: "3 weeks", items: [
+    { title: "Phase 2: Career Preparation", icon: <Brain className="w-12 h-12 mb-4 text-green-600" />, duration: "4 weeks", items: [
       "Resume building workshop tailored for TCS, Cognizant, and Mindtree",
       "AI-powered interview practice simulating actual company interviews",
       "Soft skills training focused on Indian corporate culture",
       "Industry expert mentorship from professionals at leading tech companies"
     ]},
-    { title: "Phase 3: Project Application", icon: <Rocket className="w-12 h-12 mb-4 text-purple-600" />, duration: "3 weeks", items: [
+    { title: "Phase 3: Project Application", icon: <Rocket className="w-12 h-12 mb-4 text-purple-600" />, duration: "4 weeks", items: [
       "Capstone project ideation and planning based on real industry challenges",
       "Project development with mentor check-ins from experienced professionals",
       "Final project presentations to simulate client or stakeholder meetings"
+    ]},
+    { title: "Certification", icon: <Award className="w-12 h-12 mb-4 text-yellow-600" />, duration: "Upon Completion", items: [
+      "Receive a certified internship certificate recognized by top tech companies",
+      "Detailed performance evaluation and personalized recommendation letter",
+      "Portfolio of projects and skills tailored for BTech students"
     ]},
     { title: "Ongoing Support", icon: <Users className="w-12 h-12 mb-4 text-orange-600" />, duration: "Lifetime", items: [
       "Access to learning resources and industry updates",
@@ -32,7 +37,7 @@ const ProgramStructure = () => {
     <section id="program-structure" className="py-24 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8 dark:text-white">Program Structure</h2>
-        <p className="text-center text-xl mb-12 dark:text-gray-300">Our comprehensive 3-month program is designed to take you from learning to earning, preparing you for success at leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
+        <p className="text-center text-xl mb-12 dark:text-gray-300">Our comprehensive 3-month program is designed specifically for BTech students, preparing you for success at leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {phases.map((phase, index) => (
             <motion.div 
