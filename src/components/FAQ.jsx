@@ -10,7 +10,7 @@ export const FAQ = () => {
   const faqItems = [
     {
       question: "What is the NexGen Internship Program?",
-      answer: "The NexGen Internship Program is a comprehensive training program designed for college undergraduates in India to enhance their skills and prepare for internships in the tech industry."
+      answer: "The NexGen Internship Program is a comprehensive training program designed for college undergraduates in India to enhance their skills and prepare for internships in top tech companies like TCS, Cognizant, Tech Mahindra, and Mindtree."
     },
     {
       question: "How long does the program last?",
@@ -18,19 +18,19 @@ export const FAQ = () => {
     },
     {
       question: "What technologies will I learn during the program?",
-      answer: "You'll gain hands-on experience with full-stack development, Python, cloud computing, AI, and machine learning. We also focus on using AI tools for coding to keep you at the cutting edge."
+      answer: "You'll gain hands-on experience with full-stack development, Python, cloud computing, AI, and machine learning. We focus on technologies commonly used by leading Indian tech companies to keep you at the cutting edge."
     },
     {
       question: "How does the AI interviewer work?",
-      answer: "Our AI interviewer uses advanced natural language processing to simulate real interview scenarios. It adapts to your responses, providing a realistic practice experience and feedback."
+      answer: "Our AI interviewer uses advanced natural language processing to simulate real interview scenarios from top Indian tech companies. It adapts to your responses, providing a realistic practice experience and feedback."
     },
     {
       question: "Is there a job guarantee after completing the program?",
-      answer: "While we can't guarantee job placement, our program significantly enhances your chances. Many of our graduates have successfully secured internships and jobs at top tech companies."
+      answer: "While we can't guarantee job placement, our program significantly enhances your chances. Many of our graduates have successfully secured internships and jobs at top tech companies like TCS, Cognizant, Tech Mahindra, and Mindtree."
     },
     {
       question: "What kind of projects will I work on?",
-      answer: "You'll work on a variety of projects, including a 2-month capstone project where you'll apply your skills in AI, ML, and full-stack development to solve real-world problems."
+      answer: "You'll work on a variety of projects, including a 2-month capstone project where you'll apply your skills in AI, ML, and full-stack development to solve real-world problems relevant to the Indian tech industry."
     },
     {
       question: "How much does the program cost?",
@@ -38,7 +38,7 @@ export const FAQ = () => {
     },
     {
       question: "Can I participate in the program while studying full-time?",
-      answer: "Yes, the program is designed to be flexible and can be completed alongside your full-time studies. However, you should be prepared to dedicate significant time and effort to get the most out of the program."
+      answer: "Yes, the program is designed to be flexible and can be completed alongside your full-time studies. However, you should be prepared to dedicate significant time and effort to get the most out of the program and prepare for opportunities at top Indian tech companies."
     }
   ];
 
