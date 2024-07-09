@@ -3,12 +3,21 @@ import { Layout } from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { FAQ } from '@/components/FAQ';
+import { ContactForm } from '@/components/ContactForm';
 import { useTheme } from 'next-themes';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Share2 } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
+
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <Layout>
@@ -47,10 +56,13 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Button size="lg" asChild>
+            <Button size="lg" asChild className="mr-4">
               <a href="https://forms.gle/T3mDS3MGaqFu84jz5" target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
+            </Button>
+            <Button size="lg" variant="outline" onClick={() => scrollTo('contact')}>
+              Contact Us
             </Button>
           </motion.div>
         </div>
@@ -162,6 +174,9 @@ export default function Home() {
                   <p className="text-blue-600 dark:text-blue-400 mb-2">{story.role}</p>
                   <p className="text-gray-600 dark:text-gray-300">{story.story}</p>
                 </div>
+                <Button variant="outline" size="sm" className="mt-4 md:mt-0 md:ml-auto">
+                  <Share2 className="mr-2 h-4 w-4" /> Share
+                </Button>
               </motion.div>
             ))}
           </div>
@@ -199,6 +214,28 @@ export default function Home() {
 
       {/* FAQ Section */}
       <FAQ />
+
+      {/* Contact Form Section */}
+      <section id="contact" className="py-20 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Contact Us</h2>
+          <div className="max-w-md mx-auto">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="bg-blue-100 dark:bg-blue-900 py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold mb-4 dark:text-white">Stay Updated</h2>
+          <p className="mb-6 dark:text-gray-300">Subscribe to our newsletter for the latest updates and opportunities.</p>
+          <form className="max-w-md mx-auto flex">
+            <Input type="email" placeholder="Your email address" className="flex-grow mr-2" />
+            <Button type="submit">Subscribe</Button>
+          </form>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="bg-blue-600 dark:bg-blue-800 text-white py-20">
