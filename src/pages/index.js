@@ -6,7 +6,6 @@ import { FAQ } from '@/components/FAQ';
 import { ContactForm } from '@/components/ContactForm';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
-import Link from 'next/link';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -153,10 +152,10 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">What Our Students Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: "Priya Sharma", text: "NexGen's program was a game-changer for my career. I landed an internship at a top tech company!", image: "/images/priya.jpg" },
-              { name: "Rahul Patel", text: "The mentorship and AI interview practice gave me the confidence to ace my interviews.", image: "/images/rahul.jpg" },
-              { name: "Ananya Gupta", text: "Learning cutting-edge technologies and working on real projects set me apart from other candidates.", image: "/images/ananya.jpg" },
-              { name: "Vikram Singh", text: "The resume editing service helped me showcase my skills effectively. Highly recommended!", image: "/images/vikram.jpg" },
+              { name: "Priya Sharma", text: "NexGen's program was a game-changer for my career. I landed an internship at a top tech company!" },
+              { name: "Rahul Patel", text: "The mentorship and AI interview practice gave me the confidence to ace my interviews." },
+              { name: "Ananya Gupta", text: "Learning cutting-edge technologies and working on real projects set me apart from other candidates." },
+              { name: "Vikram Singh", text: "The resume editing service helped me showcase my skills effectively. Highly recommended!" },
             ].map((testimonial, index) => (
               <motion.div 
                 key={index} 
@@ -166,7 +165,6 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
               >
-                <img src={testimonial.image} alt={testimonial.name} width={64} height={64} className="rounded-full mr-4" />
                 <div>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">"{testimonial.text}"</p>
                   <p className="font-semibold dark:text-white">{testimonial.name}</p>
