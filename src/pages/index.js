@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Layout } from '@/components/Layout';
 import { Button } from '@/components/ui/button';
@@ -20,8 +20,10 @@ const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false
 export default function Home() {
   const { theme, setTheme } = useTheme();
   const controls = useAnimation();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     controls.start({ opacity: 1, y: 0 });
   }, [controls]);
 
@@ -29,6 +31,31 @@ export default function Home() {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // JSON-LD script content
+  const jsonLdScript = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "NexGen Internship Program",
+    "description": "Comprehensive internship training program for Indian undergraduates in technology",
+    "url": "https://www.nexgeninternship.com",
+    "logo": "https://www.nexgeninternship.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/nexgeninternship",
+      "https://www.linkedin.com/company/nexgeninternship",
+      "https://twitter.com/nexgeninternship"
+    ],
+    "offers": {
+      "@type": "EducationalOccupationalProgram",
+      "name": "NexGen Internship Program",
+      "description": "A 2-month internship training program covering full-stack development, AI, ML, and cloud computing",
+      "timeToComplete": "P2M",
+      "occupationalCategory": "15-1252 Software Developers",
+      "programPrerequisites": "College students pursuing technology-related degrees",
+      "educationalProgramMode": "Online",
+      "financialAidEligible": "https://schema.org/FinancialAidEligible"
     }
   };
 
@@ -42,7 +69,7 @@ export default function Home() {
           onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
           aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
-          {theme === 'dark' ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
+          {mounted && (theme === 'dark' ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />)}
         </Button>
       </div>
 
@@ -115,13 +142,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Trusted by Top Companies</h2>
           <div className="flex flex-wrap justify-center items-center gap-8">
             {['google', 'amazon', 'microsoft', 'apple', 'facebook'].map((company) => (
-              <div key={company} className="w-32 h-16 relative">
-                <Image
-                  src={`/images/${company}-logo.png`}
-                  alt={`${company} logo`}
-                  layout="fill"
-                  objectFit="contain"
-                />
+              <div key={company} className="w-32 h-16 relative bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
+                <p className="text-sm font-semibold text-gray-600 dark:text-gray-300">{company.charAt(0).toUpperCase() + company.slice(1)}</p>
               </div>
             ))}
           </div>
@@ -176,33 +198,9 @@ export default function Home() {
       <ChatWidget />
 
       {/* JSON-LD Schema Markup */}
-      <script type="application/ld+json">
-        {`
-          {
-            "@context": "https://schema.org",
-            "@type": "EducationalOrganization",
-            "name": "NexGen Internship Program",
-            "description": "Comprehensive internship training program for Indian undergraduates in technology",
-            "url": "https://www.nexgeninternship.com",
-            "logo": "https://www.nexgeninternship.com/logo.png",
-            "sameAs": [
-              "https://www.facebook.com/nexgeninternship",
-              "https://www.linkedin.com/company/nexgeninternship",
-              "https://twitter.com/nexgeninternship"
-            ],
-            "offers": {
-              "@type": "EducationalOccupationalProgram",
-              "name": "NexGen Internship Program",
-              "description": "A 2-month internship training program covering full-stack development, AI, ML, and cloud computing",
-              "timeToComplete": "P2M",
-              "occupationalCategory": "15-1252 Software Developers",
-              "programPrerequisites": "College students pursuing technology-related degrees",
-              "educationalProgramMode": "Online",
-              "financialAidEligible": "https://schema.org/FinancialAidEligible"
-            }
-          }
-        `}
-      </script>
+      {mounted && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdScript) }} />
+      )}
     </Layout>
   );
 }
