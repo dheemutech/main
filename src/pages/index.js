@@ -1,17 +1,21 @@
 import React, { useEffect } from 'react';
+import Image from 'next/image';
 import { Layout } from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { motion, useAnimation } from 'framer-motion';
 import { FAQ } from '@/components/FAQ';
 import { ContactForm } from '@/components/ContactForm';
 import { useTheme } from 'next-themes';
-import { Sun, Moon, Code, Brain, Rocket, Users, Award, BookOpen } from 'lucide-react';
+import { Sun, Moon } from 'lucide-react';
 import dynamic from 'next/dynamic';
 
 // Lazy load components
 const LazyProgramStructure = dynamic(() => import('@/components/ProgramStructure'), { ssr: false });
 const LazyFeatures = dynamic(() => import('@/components/Features'), { ssr: false });
 const LazyTestimonials = dynamic(() => import('@/components/Testimonials'), { ssr: false });
+
+// Lazy load chat widget
+const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false });
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
@@ -71,7 +75,6 @@ export default function Home() {
               asChild 
               className="mr-4 hover:scale-105 transition-transform text-lg"
               onClick={() => {
-                // Google Analytics event tracking
                 window.gtag('event', 'click', {
                   'event_category': 'CTA',
                   'event_label': 'Apply Now - Hero',
@@ -87,7 +90,6 @@ export default function Home() {
               variant="outline" 
               onClick={() => {
                 scrollTo('contact');
-                // Google Analytics event tracking
                 window.gtag('event', 'click', {
                   'event_category': 'Navigation',
                   'event_label': 'Contact Us - Hero',
@@ -106,6 +108,29 @@ export default function Home() {
 
       {/* Features Section */}
       <LazyFeatures />
+
+      {/* Social Proof Section */}
+      <section className="py-16 bg-gray-100 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Trusted by Top Companies</h2>
+          <div className="flex flex-wrap justify-center items-center gap-8">
+            {['google', 'amazon', 'microsoft', 'apple', 'facebook'].map((company) => (
+              <div key={company} className="w-32 h-16 relative">
+                <Image
+                  src={`/images/${company}-logo.png`}
+                  alt={`${company} logo`}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <p className="text-2xl font-bold dark:text-white">500+ Successful Placements</p>
+            <p className="text-lg text-gray-600 dark:text-gray-300">Join our community of successful graduates</p>
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <LazyTestimonials />
@@ -134,7 +159,6 @@ export default function Home() {
             asChild 
             className="hover:bg-white hover:text-blue-600 transition-colors text-lg"
             onClick={() => {
-              // Google Analytics event tracking
               window.gtag('event', 'click', {
                 'event_category': 'CTA',
                 'event_label': 'Apply Now - Footer',
@@ -147,6 +171,9 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      {/* Chat Widget */}
+      <ChatWidget />
 
       {/* JSON-LD Schema Markup */}
       <script type="application/ld+json">

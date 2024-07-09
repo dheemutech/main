@@ -32,25 +32,31 @@ const ProgramStructure = () => {
     <section id="program-structure" className="py-24 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Program Structure</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="relative">
+          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
           {phases.map((phase, index) => (
             <motion.div 
               key={index}
-              className="bg-gray-100 dark:bg-gray-700 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative mb-12 flex items-center"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <div className="flex flex-col items-center mb-6">
-                {phase.icon}
-                <h3 className="text-2xl font-semibold mb-2 dark:text-white text-center">{phase.title}</h3>
-                <span className="text-lg font-medium text-gray-600 dark:text-gray-300">{phase.duration}</span>
+              <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
+                <div className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex flex-col items-center mb-4">
+                    {phase.icon}
+                    <h3 className="text-2xl font-semibold mb-2 dark:text-white">{phase.title}</h3>
+                    <span className="text-lg font-medium text-gray-600 dark:text-gray-300">{phase.duration}</span>
+                  </div>
+                  <ul className="list-disc list-inside space-y-2 dark:text-gray-200">
+                    {phase.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-lg">{item}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <ul className="list-disc list-inside space-y-2 dark:text-gray-200">
-                {phase.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-lg">{item}</li>
-                ))}
-              </ul>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-500 rounded-full"></div>
             </motion.div>
           ))}
         </div>
