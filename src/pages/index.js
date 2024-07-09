@@ -1,13 +1,11 @@
 import React from 'react';
 import { Layout } from '@/components/Layout';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { motion } from 'framer-motion';
 import { FAQ } from '@/components/FAQ';
 import { ContactForm } from '@/components/ContactForm';
 import { useTheme } from 'next-themes';
-import { Sun, Moon, Share2 } from 'lucide-react';
-import Image from 'next/image';
+import { Sun, Moon } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
@@ -149,50 +147,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Success Stories Section */}
-      <section id="success-stories" className="py-20 bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Success Stories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                name: "Aarav Patel",
-                role: "Software Engineer at Google",
-                story: "NexGen's program was the turning point in my career. The hands-on projects and mentorship gave me the confidence to apply to top tech companies. I'm now living my dream as a Software Engineer at Google!",
-                image: "/images/aarav.jpg"
-              },
-              {
-                name: "Zara Khan",
-                role: "Data Scientist at Amazon",
-                story: "The AI and ML modules at NexGen opened up a whole new world for me. The practical experience I gained through the program's projects was instrumental in landing my role as a Data Scientist at Amazon.",
-                image: "/images/zara.jpg"
-              },
-            ].map((story, index) => (
-              <motion.div 
-                key={index} 
-                className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md flex flex-col md:flex-row items-center"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.02 }}
-              >
-                <Image src={story.image} alt={story.name} width={100} height={100} className="rounded-full mb-4 md:mb-0 md:mr-6" />
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 dark:text-white">{story.name}</h3>
-                  <p className="text-blue-600 dark:text-blue-400 mb-2">{story.role}</p>
-                  <p className="text-gray-600 dark:text-gray-300">{story.story}</p>
-                </div>
-                <Button variant="outline" size="sm" className="mt-4 md:mt-0 md:ml-auto hover:bg-blue-100 dark:hover:bg-gray-600">
-                  <Share2 className="mr-2 h-4 w-4" /> Share
-                </Button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
-      <section id="testimonials" className="bg-gray-50 dark:bg-gray-900 py-20">
+      <section id="testimonials" className="bg-white dark:bg-gray-800 py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">What Our Students Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -204,13 +160,13 @@ export default function Home() {
             ].map((testimonial, index) => (
               <motion.div 
                 key={index} 
-                className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md flex items-start hover:shadow-lg transition-shadow duration-300"
+                className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md flex items-start hover:shadow-lg transition-shadow duration-300"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.03 }}
               >
-                <Image src={testimonial.image} alt={testimonial.name} width={64} height={64} className="rounded-full mr-4" />
+                <img src={testimonial.image} alt={testimonial.name} width={64} height={64} className="rounded-full mr-4" />
                 <div>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">"{testimonial.text}"</p>
                   <p className="font-semibold dark:text-white">{testimonial.name}</p>
@@ -231,22 +187,6 @@ export default function Home() {
           <div className="max-w-md mx-auto">
             <ContactForm />
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="bg-blue-100 dark:bg-blue-900 py-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-4 dark:text-white">Stay Updated</h2>
-          <p className="mb-6 dark:text-gray-300">Subscribe to our newsletter for the latest updates and opportunities.</p>
-          <form className="max-w-md mx-auto flex" onSubmit={(e) => {
-            e.preventDefault();
-            // Add newsletter signup logic here
-            alert('Thank you for subscribing!');
-          }}>
-            <Input type="email" placeholder="Your email address" className="flex-grow mr-2" required />
-            <Button type="submit" className="hover:bg-blue-600 transition-colors">Subscribe</Button>
-          </form>
         </div>
       </section>
 

@@ -9,8 +9,8 @@ import {
 export const FAQ = () => {
   const faqItems = [
     {
-      question: "Who is eligible for the NexGen Internship Program?",
-      answer: "The program is designed for college undergraduates in India who are looking to enhance their skills and prepare for internships in the tech industry."
+      question: "What is the NexGen Internship Program?",
+      answer: "The NexGen Internship Program is a comprehensive training program designed for college undergraduates in India to enhance their skills and prepare for internships in the tech industry."
     },
     {
       question: "How long does the program last?",
@@ -27,17 +27,29 @@ export const FAQ = () => {
     {
       question: "Is there a job guarantee after completing the program?",
       answer: "While we can't guarantee job placement, our program significantly enhances your chances. Many of our graduates have successfully secured internships and jobs at top tech companies."
+    },
+    {
+      question: "What kind of projects will I work on?",
+      answer: "You'll work on a variety of projects, including a 2-month capstone project where you'll apply your skills in AI, ML, and full-stack development to solve real-world problems."
+    },
+    {
+      question: "How much does the program cost?",
+      answer: "Program costs vary depending on the specific track and duration. Please contact our admissions team for the most up-to-date pricing information and available scholarships."
+    },
+    {
+      question: "Can I participate in the program while studying full-time?",
+      answer: "Yes, the program is designed to be flexible and can be completed alongside your full-time studies. However, you should be prepared to dedicate significant time and effort to get the most out of the program."
     }
   ];
 
   return (
-    <section id="faq" className="py-20 bg-gray-50">
+    <section id="faq" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Frequently Asked Questions</h2>
         <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
           {faqItems.map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>{item.question}</AccordionTrigger>
+              <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
               <AccordionContent>{item.answer}</AccordionContent>
             </AccordionItem>
           ))}
