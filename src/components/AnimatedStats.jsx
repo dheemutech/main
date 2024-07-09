@@ -22,12 +22,17 @@ export const AnimatedStats = () => {
         <div className="mt-12 text-center">
           <p className="text-2xl font-bold mb-4 dark:text-white">Our Top Recruiting Partners</p>
           <div className="flex flex-wrap justify-center items-center gap-6">
-            {['TCS', 'Cognizant', 'Tech Mahindra', 'Mindtree'].map((company) => (
+            {['TCS', 'Cognizant', 'Mindtree'].map((company) => (
               <div key={company} className="bg-white dark:bg-gray-700 px-6 py-3 rounded-lg shadow-md">
                 <p className="text-lg font-semibold text-gray-800 dark:text-gray-200">{company}</p>
               </div>
             ))}
           </div>
+        </div>
+        <div className="mt-8 text-center">
+          <p className="text-xl text-gray-700 dark:text-gray-300">
+            Our students have been successfully placed in top companies like TCS, Cognizant, and Mindtree.
+          </p>
         </div>
       </div>
     </section>

@@ -50,7 +50,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "NexGen Internship Program",
-    "description": "Comprehensive internship training program for Indian undergraduates in technology",
+    "description": "3 months internship program with NexGen for Indian undergraduates in technology",
     "url": "https://www.nexgeninternship.com",
     "logo": "https://www.nexgeninternship.com/logo.png",
     "sameAs": [
@@ -61,8 +61,8 @@ export default function Home() {
     "offers": {
       "@type": "EducationalOccupationalProgram",
       "name": "NexGen Internship Program",
-      "description": "A 2-month internship training program covering full-stack development, AI, ML, and cloud computing",
-      "timeToComplete": "P2M",
+      "description": "A 3-month internship program covering full-stack development, AI, ML, and cloud computing",
+      "timeToComplete": "P3M",
       "occupationalCategory": "15-1252 Software Developers",
       "programPrerequisites": "College students pursuing technology-related degrees",
       "educationalProgramMode": "Online",
@@ -73,11 +73,11 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>NexGen Internship Program | Launch Your Tech Career</title>
-        <meta name="description" content="Join NexGen's comprehensive internship training program for Indian undergraduates in technology. Boost your career with hands-on experience in full-stack development, AI, ML, and cloud computing." />
-        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, Indian undergraduates, TCS, Cognizant, Tech Mahindra, Mindtree" />
-        <meta property="og:title" content="NexGen Internship Program | Launch Your Tech Career" />
-        <meta property="og:description" content="Join NexGen's comprehensive internship training program for Indian undergraduates in technology. Boost your career with hands-on experience." />
+        <title>3 Months Internship with NexGen | Launch Your Tech Career</title>
+        <meta name="description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Boost your career with hands-on experience in full-stack development, AI, ML, and cloud computing." />
+        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, Indian undergraduates, TCS, Cognizant, Mindtree" />
+        <meta property="og:title" content="3 Months Internship with NexGen | Launch Your Tech Career" />
+        <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Boost your career with hands-on experience." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nexgeninternship.com" />
         <meta property="og:image" content="https://www.nexgeninternship.com/og-image.jpg" />
@@ -105,7 +105,7 @@ export default function Home() {
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            Launch Your Tech Career with NexGen
+            3 Months Internship with NexGen
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl mb-10"
@@ -189,7 +189,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-blue-600 dark:bg-blue-800 text-white py-24">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
+          <h2 className="text-4xl font-bold mb-6">Ready to Start Your 3-Month Journey?</h2>
           <p className="text-xl mb-10">Join NexGen's Internship Program and transform your career prospects.</p>
           <Button 
             size="lg" 
