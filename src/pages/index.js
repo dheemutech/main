@@ -74,10 +74,10 @@ export default function Home() {
     <Layout>
       <Head>
         <title>3 Months Internship with NexGen | Launch Your Tech Career</title>
-        <meta name="description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Boost your career with hands-on experience in full-stack development, AI, ML, and cloud computing." />
+        <meta name="description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Boost your career with hands-on experience and get placed in top companies like TCS, Cognizant, and Mindtree." />
         <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, Indian undergraduates, TCS, Cognizant, Mindtree" />
         <meta property="og:title" content="3 Months Internship with NexGen | Launch Your Tech Career" />
-        <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Boost your career with hands-on experience." />
+        <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Get placed in top companies like TCS, Cognizant, and Mindtree." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nexgeninternship.com" />
         <meta property="og:image" content="https://www.nexgeninternship.com/og-image.jpg" />
@@ -108,12 +108,20 @@ export default function Home() {
             3 Months Internship with NexGen
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl mb-10"
+            className="text-xl md:text-2xl mb-6"
             initial={{ opacity: 0, y: -20 }}
             animate={controls}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             Comprehensive internship training for Indian undergrads
+          </motion.p>
+          <motion.p 
+            className="text-lg md:text-xl mb-10"
+            initial={{ opacity: 0, y: -20 }}
+            animate={controls}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            Get placed in top companies like TCS, Cognizant, and Mindtree
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -190,7 +198,7 @@ export default function Home() {
       <section className="bg-blue-600 dark:bg-blue-800 text-white py-24">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Start Your 3-Month Journey?</h2>
-          <p className="text-xl mb-10">Join NexGen's Internship Program and transform your career prospects.</p>
+          <p className="text-xl mb-10">Join NexGen's Internship Program and transform your career prospects with placements in TCS, Cognizant, and Mindtree.</p>
           <Button 
             size="lg" 
             variant="secondary" 
