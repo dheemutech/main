@@ -75,7 +75,7 @@ export default function Home() {
       <Head>
         <title>NexGen Internship Program | Launch Your Tech Career</title>
         <meta name="description" content="Join NexGen's comprehensive internship training program for Indian undergraduates in technology. Boost your career with hands-on experience in full-stack development, AI, ML, and cloud computing." />
-        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, Indian undergraduates" />
+        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, Indian undergraduates, TCS, Cognizant, Tech Mahindra, Mindtree" />
         <meta property="og:title" content="NexGen Internship Program | Launch Your Tech Career" />
         <meta property="og:description" content="Join NexGen's comprehensive internship training program for Indian undergraduates in technology. Boost your career with hands-on experience." />
         <meta property="og:type" content="website" />
@@ -161,24 +161,6 @@ export default function Home() {
 
       {/* Features Section */}
       <LazyFeatures />
-
-      {/* Social Proof Section */}
-      <section className="py-16 bg-gray-100 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">Trusted by Top Companies</h2>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {['google', 'amazon', 'microsoft', 'apple', 'facebook'].map((company) => (
-              <div key={company} className="w-32 h-16 relative bg-gray-200 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                <p className="text-sm font-semibold text-gray-600 dark:text-gray-300">{company.charAt(0).toUpperCase() + company.slice(1)}</p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <p className="text-2xl font-bold dark:text-white">500+ Successful Placements</p>
-            <p className="text-lg text-gray-600 dark:text-gray-300">Join our community of successful graduates</p>
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <LazyTestimonials />

@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Priya Sharma",
-      role: "Software Engineer at Google",
+      name: "Mahesh Reddy",
+      role: "Software Engineer at TCS",
       content: "NexGen's internship program was a game-changer for my career. The hands-on experience and mentorship I received were invaluable.",
     },
     {
-      name: "Rahul Patel",
-      role: "Data Scientist at Amazon",
-      content: "The AI and ML training I got at NexGen prepared me perfectly for my role at Amazon. It's an excellent program for aspiring tech professionals.",
+      name: "Aakash Chowary",
+      role: "Data Scientist at Cognizant",
+      content: "The AI and ML training I got at NexGen prepared me perfectly for my role at Cognizant. It's an excellent program for aspiring tech professionals.",
     },
     {
-      name: "Ananya Desai",
-      role: "Frontend Developer at Microsoft",
+      name: "Ganesh Kumar",
+      role: "Frontend Developer at Tech Mahindra",
       content: "NexGen's focus on real-world projects and cutting-edge technologies gave me a significant advantage in my job search. Highly recommended!",
     }
   ];
