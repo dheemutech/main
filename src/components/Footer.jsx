@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
@@ -13,9 +14,11 @@ export const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="/#features" className="hover:text-blue-400">Features</a></li>
-              <li><a href="/#testimonials" className="hover:text-blue-400">Testimonials</a></li>
-              <li><a href="/#faq" className="hover:text-blue-400">FAQ</a></li>
+              <li><Link href="/#features" className="hover:text-blue-400">Features</Link></li>
+              <li><Link href="/#testimonials" className="hover:text-blue-400">Testimonials</Link></li>
+              <li><Link href="/#faq" className="hover:text-blue-400">FAQ</Link></li>
+              <li><Link href="/privacy-policy" className="hover:text-blue-400">Privacy Policy</Link></li>
+              <li><Link href="/terms-of-service" className="hover:text-blue-400">Terms of Service</Link></li>
             </ul>
           </div>
           <div>
@@ -29,7 +32,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center text-gray-400">
-          <p>&copy; 2024 NexGen Internship Program. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NexGen Internship Program. All rights reserved.</p>
         </div>
       </div>
     </footer>
