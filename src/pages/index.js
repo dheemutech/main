@@ -8,6 +8,8 @@ import { ContactForm } from '@/components/ContactForm';
 import { useTheme } from 'next-themes';
 import { Sun, Moon } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import NewsletterSignup from '@/components/NewsletterSignup';
+import AnimatedStats from '@/components/AnimatedStats';
 
 // Lazy load components
 const LazyProgramStructure = dynamic(() => import('@/components/ProgramStructure'), { 
@@ -151,6 +153,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Animated Stats Section */}
+      <AnimatedStats />
+
       {/* Program Structure Section */}
       <LazyProgramStructure />
 
@@ -180,6 +185,14 @@ export default function Home() {
 
       {/* FAQ Section */}
       <FAQ />
+
+      {/* Newsletter Signup Section */}
+      <section className="py-16 bg-blue-100 dark:bg-blue-900">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">Stay Updated</h2>
+          <NewsletterSignup />
+        </div>
+      </section>
 
       {/* Contact Form Section */}
       <section id="contact" className="py-24 bg-white dark:bg-gray-800">
