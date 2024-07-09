@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 export const Header = () => {
   return (
@@ -15,9 +14,6 @@ export const Header = () => {
             <li><Link href="/#faq" className="text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400">FAQ</Link></li>
           </ul>
         </nav>
-        <Button asChild>
-          <a href="https://forms.gle/T3mDS3MGaqFu84jz5" target="_blank" rel="noopener noreferrer">Apply Now</a>
-        </Button>
       </div>
     </header>
   );

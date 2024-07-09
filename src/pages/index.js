@@ -50,7 +50,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     "name": "NexGen Internship Program",
-    "description": "3 months internship program with NexGen for Indian undergraduates in technology",
+    "description": "3 months comprehensive internship program with NexGen for BTech students in technology",
     "url": "https://www.nexgeninternship.com",
     "logo": "https://www.nexgeninternship.com/logo.png",
     "sameAs": [
@@ -61,10 +61,10 @@ export default function Home() {
     "offers": {
       "@type": "EducationalOccupationalProgram",
       "name": "NexGen Internship Program",
-      "description": "A 3-month internship program covering full-stack development, AI, ML, and cloud computing",
+      "description": "A 3-month comprehensive internship program for BTech students covering full-stack development, AI, ML, and cloud computing",
       "timeToComplete": "P3M",
       "occupationalCategory": "15-1252 Software Developers",
-      "programPrerequisites": "College students pursuing technology-related degrees",
+      "programPrerequisites": "BTech students pursuing technology-related degrees",
       "educationalProgramMode": "Online",
       "financialAidEligible": "https://schema.org/FinancialAidEligible"
     }
@@ -73,11 +73,11 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>3 Months Internship with NexGen | Launch Your Tech Career</title>
-        <meta name="description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Boost your career with hands-on experience and get placed in top companies like TCS, Cognizant, and Mindtree." />
-        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, Indian undergraduates, TCS, Cognizant, Mindtree" />
-        <meta property="og:title" content="3 Months Internship with NexGen | Launch Your Tech Career" />
-        <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for Indian undergraduates in technology. Get placed in top companies like TCS, Cognizant, and Mindtree." />
+        <title>3 Months Comprehensive Internship with NexGen | For BTech Students</title>
+        <meta name="description" content="Join NexGen's 3-month comprehensive internship program for BTech students in technology. Boost your career with hands-on experience and get placed in top companies like TCS, Cognizant, and Mindtree." />
+        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, BTech students, TCS, Cognizant, Mindtree" />
+        <meta property="og:title" content="3 Months Comprehensive Internship with NexGen | For BTech Students" />
+        <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for BTech students in technology. Get placed in top companies like TCS, Cognizant, and Mindtree." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nexgeninternship.com" />
         <meta property="og:image" content="https://www.nexgeninternship.com/og-image.jpg" />
@@ -105,7 +105,7 @@ export default function Home() {
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            3 Months Internship with NexGen
+            3 Months Comprehensive Internship with NexGen
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl mb-6"
@@ -113,7 +113,7 @@ export default function Home() {
             animate={controls}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Comprehensive internship training for Indian undergrads
+            For BTech Students: Launch Your Tech Career
           </motion.p>
           <motion.p 
             className="text-lg md:text-xl mb-10"
@@ -142,20 +142,6 @@ export default function Home() {
               <a href="https://forms.gle/T3mDS3MGaqFu84jz5" target="_blank" rel="noopener noreferrer">
                 Apply Now
               </a>
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={() => {
-                scrollTo('contact');
-                window.gtag('event', 'click', {
-                  'event_category': 'Navigation',
-                  'event_label': 'Contact Us - Hero',
-                });
-              }} 
-              className="hover:scale-105 transition-transform text-lg"
-            >
-              Contact Us
             </Button>
           </motion.div>
         </div>
@@ -198,7 +184,7 @@ export default function Home() {
       <section className="bg-blue-600 dark:bg-blue-800 text-white py-24">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Start Your 3-Month Journey?</h2>
-          <p className="text-xl mb-10">Join NexGen's Internship Program and transform your career prospects with placements in TCS, Cognizant, and Mindtree.</p>
+          <p className="text-xl mb-10">Join NexGen's Comprehensive Internship Program for BTech students and transform your career prospects with placements in TCS, Cognizant, and Mindtree.</p>
           <Button 
             size="lg" 
             variant="secondary" 
