@@ -88,10 +88,11 @@ export default function Home() {
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            3 Months Internship with NexGen
+            <span className="text-white">3 Months Internship with </span>
+            <span className="text-white text-7xl md:text-8xl">NexGen</span>
           </motion.h1>
           <motion.p 
-            className="text-lg md:text-xl mb-10"
+            className="text-lg md:text-xl mb-10 text-white"
             initial={{ opacity: 0, y: -20 }}
             animate={controls}
             transition={{ duration: 0.5, delay: 0.3 }}
