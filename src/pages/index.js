@@ -1,33 +1,25 @@
 import React from 'react';
 import Head from 'next/head';
 import { Layout } from '@/components/Layout';
-import AnimatedStats from '@/components/AnimatedStats';
+import HeroSection from '@/components/HeroSection';
 import ProgramStructure from '@/components/ProgramStructure';
 import Features from '@/components/Features';
 import { FAQ } from '@/components/FAQ';
 import Testimonials from '@/components/Testimonials';
 import { ContactForm } from '@/components/ContactForm';
+import FloatingCTA from '@/components/FloatingCTA';
 
 export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>NexGen Internship Program for BTech Students</title>
-        <meta name="description" content="Comprehensive 3-month internship program for BTech students, offering hands-on experience, mentorship, and career preparation for top tech companies." />
-        <meta name="keywords" content="BTech internship, career development, tech internship, NexGen program, software engineering" />
+        <title>NexGen 3-Month Internship Program for BTech Students</title>
+        <meta name="description" content="Intensive 3-month internship program for BTech students, offering hands-on experience, mentorship, and rapid career preparation for top tech companies." />
+        <meta name="keywords" content="BTech internship, career development, tech internship, NexGen program, software engineering, 3-month program" />
       </Head>
 
       <main className="min-h-screen">
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-20">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-10 text-white text-center">NexGen Internship Program for BTech Students</h1>
-            <p className="text-xl text-white text-center mb-12">
-              Transforming BTech Careers with Industry-Leading Training and Placements
-            </p>
-            <AnimatedStats />
-          </div>
-        </section>
-
+        <HeroSection />
         <ProgramStructure />
         <Features />
         <Testimonials />
@@ -39,6 +31,8 @@ export default function Home() {
             <ContactForm />
           </div>
         </section>
+
+        <FloatingCTA />
       </main>
     </Layout>
   );

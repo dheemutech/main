@@ -4,9 +4,9 @@ import { Award, BookOpen, Edit, Code, Brain, Users, Rocket, MessageCircle, UserP
 
 const Features = () => {
   const features = [
-    { title: "3-Month Comprehensive Internship", icon: <Award className="w-12 h-12 mb-4 text-yellow-500" />, description: "Intensive program designed specifically for BTech students to prepare you for top internships at leading companies like TCS, Cognizant, and Mindtree." },
+    { title: "3-Month Intensive Internship", icon: <Award className="w-12 h-12 mb-4 text-yellow-500" />, description: "Accelerated program designed specifically for BTech students to rapidly prepare you for top internships at leading companies like TCS, Cognizant, and Mindtree." },
     { title: "Certified Internship Certificate", icon: <BookOpen className="w-12 h-12 mb-4 text-green-500" />, description: "Gain a valuable credential recognized by leading tech companies across India, boosting your resume and career prospects." },
-    { title: "Hands-on Training", icon: <Code className="w-12 h-12 mb-4 text-purple-500" />, description: "Receive practical, industry-relevant training in full-stack development, Python, and cloud computing with hands-on projects." },
+    { title: "Hands-on Training", icon: <Code className="w-12 h-12 mb-4 text-purple-500" />, description: "Receive intensive, industry-relevant training in full-stack development, Python, and cloud computing with hands-on projects." },
     { title: "AI-Powered Interview Practice", icon: <Brain className="w-12 h-12 mb-4 text-red-500" />, description: "Prepare for interviews with our advanced AI interviewer, covering both technical and behavioral aspects specific to top Indian tech companies." },
     { title: "Access to Industry Experts", icon: <Users className="w-12 h-12 mb-4 text-indigo-500" />, description: "Learn from and network with software developers working in top companies like TCS, Cognizant, and Mindtree." },
     { title: "Capstone Project", icon: <Rocket className="w-12 h-12 mb-4 text-orange-500" />, description: "Apply your skills in AI, ML, and full-stack development to solve real-world problems, building a standout portfolio piece aligned with industry needs." },
