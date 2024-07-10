@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { Layout } from '@/components/Layout';
 import { Button } from '@/components/ui/button';
@@ -28,10 +28,8 @@ const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false
 
 export default function Home() {
   const controls = useAnimation();
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     controls.start({ opacity: 1, y: 0 });
   }, [controls]);
 
@@ -185,9 +183,7 @@ export default function Home() {
       <ChatWidget />
 
       {/* JSON-LD Schema Markup */}
-      {mounted && (
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdScript) }} />
-      )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdScript) }} />
     </Layout>
   );
 }
