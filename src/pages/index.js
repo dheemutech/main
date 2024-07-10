@@ -14,7 +14,7 @@ export default function Home() {
     <Layout>
       <Head>
         <title>NexGen 3-Month Intensive Internship Program for BTech Students</title>
-        <meta name="description" content="Transform your BTech career with our intensive 3-month internship program. Gain hands-on experience, mentorship, and rapid career preparation for top tech companies like TCS, Cognizant, and Mindtree." />
+        <meta name="description" content="Transform your BTech career with our intensive 3-month internship program. Gain hands-on experience, mentorship, and rapid career preparation for top tech companies." />
         <meta name="keywords" content="BTech internship, 3-month program, career development, tech internship, NexGen program, software engineering, intensive training" />
       </Head>
 

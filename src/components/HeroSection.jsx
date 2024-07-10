@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import AnimatedStats from '@/components/AnimatedStats';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   const handleApplyNow = () => {
@@ -11,19 +12,35 @@ const HeroSection = () => {
     window.open('https://forms.gle/T3mDS3MGaqFu84jz5', '_blank');
   };
 
+  const handleLearnMore = () => {
+    window.gtag('event', 'learn_more_click', {
+      'event_category': 'Engagement',
+      'event_label': 'Hero Section Learn More',
+    });
+    document.getElementById('program-structure').scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-6 text-white text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center leading-tight">
           NexGen 3-Month Internship Program for BTech Students - 3-Month Internship with nexgen
         </h1>
-        <div className="flex justify-center mb-8">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
           <Button
             size="lg"
             className="bg-white text-blue-600 hover:bg-blue-50 transition-colors"
             onClick={handleApplyNow}
           >
             Apply Now
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="bg-transparent text-white border-white hover:bg-white hover:text-blue-600 transition-colors"
+            onClick={handleLearnMore}
+          >
+            Learn More <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
         <AnimatedStats />
