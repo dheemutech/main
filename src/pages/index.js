@@ -8,6 +8,8 @@ import { ContactForm } from '@/components/ContactForm';
 import dynamic from 'next/dynamic';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import AnimatedStats from '@/components/AnimatedStats';
+import CountdownTimer from '@/components/CountdownTimer';
+import FloatingCTA from '@/components/FloatingCTA';
 
 // Lazy load components
 const LazyProgramStructure = dynamic(() => import('@/components/ProgramStructure'), { 
@@ -83,22 +85,23 @@ export default function Home() {
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-24">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-5xl font-bold mb-6"
             initial={{ opacity: 0, y: -20 }}
             animate={controls}
             transition={{ duration: 0.5 }}
           >
             <span className="text-white">3 Months Internship with </span>
-            <span className="text-white text-7xl md:text-8xl">NexGen</span>
+            <span className="text-white">NexGen</span>
           </motion.h1>
           <motion.p 
-            className="text-lg md:text-xl mb-10 text-white"
+            className="text-xl mb-10 text-white"
             initial={{ opacity: 0, y: -20 }}
             animate={controls}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             Get placed in top companies like TCS, Cognizant, and Mindtree
           </motion.p>
+          <CountdownTimer />
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={controls}
@@ -182,6 +185,9 @@ export default function Home() {
 
       {/* Chat Widget */}
       <ChatWidget />
+
+      {/* Floating CTA */}
+      <FloatingCTA />
 
       {/* JSON-LD Schema Markup */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdScript) }} />
