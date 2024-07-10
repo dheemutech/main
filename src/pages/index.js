@@ -96,12 +96,6 @@ export default function Home() {
         </Button>
       </div>
 
-      {/* Temporary Notification */}
-      <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-4" role="alert">
-        <p className="font-bold">Update</p>
-        <p>The site now loads in light mode by default. You can still toggle between light and dark modes using the button in the top right corner.</p>
-      </div>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-800 dark:to-indigo-900 text-white py-24">
         <div className="container mx-auto px-4 text-center">
@@ -113,14 +107,6 @@ export default function Home() {
           >
             3 Months Internship with NexGen
           </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl mb-6"
-            initial={{ opacity: 0, y: -20 }}
-            animate={controls}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            Internship Training and Certificate Provided
-          </motion.p>
           <motion.p 
             className="text-lg md:text-xl mb-10"
             initial={{ opacity: 0, y: -20 }}
