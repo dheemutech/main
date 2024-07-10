@@ -16,14 +16,14 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section id="features" className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Program Features</h2>
+        <h2 className="text-4xl font-bold text-center mb-16">Program Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {features.map((feature, index) => (
             <motion.div 
               key={index} 
-              className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -31,9 +31,9 @@ const Features = () => {
             >
               <div className="flex flex-col items-center mb-4">
                 {feature.icon}
-                <h3 className="text-xl font-semibold mb-4 dark:text-white text-center">{feature.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-center">{feature.title}</h3>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 text-center">{feature.description}</p>
+              <p className="text-gray-600 text-center">{feature.description}</p>
             </motion.div>
           ))}
         </div>

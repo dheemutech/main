@@ -34,25 +34,25 @@ const ProgramStructure = () => {
   ];
 
   return (
-    <section id="program-structure" className="py-24 bg-white dark:bg-gray-800">
+    <section id="program-structure" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8 dark:text-white">Program Structure</h2>
-        <p className="text-center text-xl mb-12 dark:text-gray-300">Our comprehensive 3-month program is designed specifically for BTech students, preparing you for success at leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
+        <h2 className="text-4xl font-bold text-center mb-8">Program Structure</h2>
+        <p className="text-center text-xl mb-12">Our comprehensive 3-month program is designed specifically for BTech students, preparing you for success at leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {phases.map((phase, index) => (
             <motion.div 
               key={index}
-              className="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="flex flex-col items-center mb-4">
                 {phase.icon}
-                <h3 className="text-2xl font-semibold mb-2 dark:text-white text-center">{phase.title}</h3>
-                <span className="text-lg font-medium text-gray-600 dark:text-gray-300">{phase.duration}</span>
+                <h3 className="text-2xl font-semibold mb-2 text-center">{phase.title}</h3>
+                <span className="text-lg font-medium text-gray-600">{phase.duration}</span>
               </div>
-              <ul className="list-disc list-inside space-y-2 dark:text-gray-200">
+              <ul className="list-disc list-inside space-y-2">
                 {phase.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="text-lg">{item}</li>
                 ))}

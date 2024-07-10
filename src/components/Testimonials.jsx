@@ -21,14 +21,14 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50 dark:bg-gray-800">
+    <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">What Our BTech Graduates Say</h2>
+        <h2 className="text-4xl font-bold text-center mb-16">What Our BTech Graduates Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
-              className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg"
+              className="bg-white p-6 rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -38,11 +38,11 @@ const Testimonials = () => {
                   {testimonial.name.charAt(0)}
                 </div>
                 <div>
-                  <h3 className="font-semibold dark:text-white">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">{testimonial.role}</p>
+                  <h3 className="font-semibold">{testimonial.name}</h3>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-gray-700 dark:text-gray-300">{testimonial.content}</p>
+              <p className="text-gray-700">{testimonial.content}</p>
             </motion.div>
           ))}
         </div>
