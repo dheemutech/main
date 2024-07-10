@@ -8,7 +8,6 @@ import { ContactForm } from '@/components/ContactForm';
 import dynamic from 'next/dynamic';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import AnimatedStats from '@/components/AnimatedStats';
-import CountdownTimer from '@/components/CountdownTimer';
 
 // Lazy load components
 const LazyProgramStructure = dynamic(() => import('@/components/ProgramStructure'), { 
@@ -100,7 +99,10 @@ export default function Home() {
           >
             Get placed in top companies like TCS, Cognizant, and Mindtree
           </motion.p>
-          <CountdownTimer />
+          
+          {/* Animated Stats Section */}
+          <AnimatedStats />
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={controls}
@@ -124,9 +126,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Animated Stats Section */}
-      <AnimatedStats />
 
       {/* Program Structure Section */}
       <LazyProgramStructure />
