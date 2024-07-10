@@ -73,10 +73,10 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>3 Months Comprehensive Internship with NexGen | For BTech Students</title>
+        <title>3 Months Internship with NexGen | For BTech Students</title>
         <meta name="description" content="Join NexGen's 3-month comprehensive internship program for BTech students in technology. Boost your career with hands-on experience and get placed in top companies like TCS, Cognizant, and Mindtree." />
         <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, BTech students, TCS, Cognizant, Mindtree" />
-        <meta property="og:title" content="3 Months Comprehensive Internship with NexGen | For BTech Students" />
+        <meta property="og:title" content="3 Months Internship with NexGen | For BTech Students" />
         <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for BTech students in technology. Get placed in top companies like TCS, Cognizant, and Mindtree." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nexgeninternship.com" />
@@ -105,7 +105,7 @@ export default function Home() {
             animate={controls}
             transition={{ duration: 0.5 }}
           >
-            3 Months Comprehensive Internship with NexGen
+            3 Months Internship with NexGen
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl mb-6"
@@ -113,7 +113,7 @@ export default function Home() {
             animate={controls}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            For BTech Students: Launch Your Tech Career
+            Internship Training and Certificate Provided
           </motion.p>
           <motion.p 
             className="text-lg md:text-xl mb-10"

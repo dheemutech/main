@@ -6,7 +6,7 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 export default function App({ Component, pageProps }) {
   return (
     <ErrorBoundary>
-      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
         <Component {...pageProps} />
         <Toaster />
       </ThemeProvider>
