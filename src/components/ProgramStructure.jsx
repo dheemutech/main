@@ -4,34 +4,34 @@ import { Code, Brain, Rocket, Users, Award } from 'lucide-react';
 
 const ProgramStructure = () => {
   const phases = [
-    { title: "Phase 1: Intensive Skill Development", icon: <Code className="w-12 h-12 mb-4 text-blue-600" />, duration: "4 weeks", items: [
-      "Accelerated full-stack development bootcamp aligned with industry standards",
-      "Intensive Python programming and cloud computing practices used by top Indian tech companies",
-      "Rapid introduction to AI and machine learning with real-world applications"
+    { title: "Phase 1: Rapid Skill Development", icon: <Code className="w-12 h-12 mb-4 text-blue-600" />, duration: "4 weeks", items: [
+      "Accelerated full-stack development bootcamp with industry-standard practices",
+      "Intensive Python programming and cloud computing crash course",
+      "Fast-track introduction to AI and machine learning fundamentals"
     ]},
     { title: "Phase 2: Career Preparation Sprint", icon: <Brain className="w-12 h-12 mb-4 text-green-600" />, duration: "4 weeks", items: [
-      "Fast-track resume building workshop tailored for TCS, Cognizant, and Mindtree",
-      "High-intensity AI-powered interview practice simulating actual company interviews",
-      "Condensed soft skills training focused on Indian corporate culture",
-      "Accelerated industry expert mentorship from professionals at leading tech companies"
+      "High-intensity resume building workshop tailored for top tech companies",
+      "Rapid-fire AI-powered interview practice sessions",
+      "Condensed soft skills and Indian corporate culture training",
+      "Fast-track mentorship sessions with industry experts"
     ]},
-    { title: "Phase 3: Rapid Project Application", icon: <Rocket className="w-12 h-12 mb-4 text-purple-600" />, duration: "4 weeks", items: [
-      "Quick-fire capstone project ideation and planning based on real industry challenges",
-      "Agile project development with frequent mentor check-ins from experienced professionals",
-      "Rapid-fire project presentations to simulate high-pressure client or stakeholder meetings"
+    { title: "Phase 3: Project Application Blitz", icon: <Rocket className="w-12 h-12 mb-4 text-purple-600" />, duration: "4 weeks", items: [
+      "Agile capstone project development addressing real industry challenges",
+      "Daily mentor check-ins and rapid iteration cycles",
+      "Intensive project presentations and feedback sessions"
     ]},
-    { title: "Certification & Ongoing Support", icon: <Award className="w-12 h-12 mb-4 text-yellow-600" />, duration: "Upon Completion", items: [
+    { title: "Certification & Immediate Support", icon: <Award className="w-12 h-12 mb-4 text-yellow-600" />, duration: "Upon Completion", items: [
       "Receive a certified 3-month internship certificate recognized by top tech companies",
-      "Comprehensive performance evaluation and personalized recommendation letter",
-      "Portfolio of projects and skills tailored for BTech students' rapid career launch"
+      "Rapid performance evaluation and personalized recommendation letter",
+      "Immediate access to job placement support and industry connections"
     ]}
   ];
 
   return (
     <section id="program-structure" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">Program Structure</h2>
-        <p className="text-center text-xl mb-12">Our intensive 3-month program is designed specifically for BTech students, rapidly preparing you for success at leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
+        <h2 className="text-4xl font-bold text-center mb-8">Intensive 3-Month Program Structure</h2>
+        <p className="text-center text-xl mb-12">Our accelerated 3-month program is meticulously designed to rapidly prepare BTech students for immediate success in leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {phases.map((phase, index) => (
