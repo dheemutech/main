@@ -60,8 +60,8 @@ export default function Home() {
     ],
     "offers": {
       "@type": "EducationalOccupationalProgram",
-      "name": "NexGen Internship Program",
-      "description": "A 3-month comprehensive internship program for BTech students covering full-stack development, AI, ML, and cloud computing",
+      "name": "NexGen 3-Month Internship Program",
+      "description": "A 3-month comprehensive internship program for BTech students covering full-stack development, AI, ML, and cloud computing. Internship training and certificate provided.",
       "timeToComplete": "P3M",
       "occupationalCategory": "15-1252 Software Developers",
       "programPrerequisites": "BTech students pursuing technology-related degrees",
@@ -73,11 +73,11 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>3 Months Internship with NexGen | For BTech Students</title>
-        <meta name="description" content="Join NexGen's 3-month comprehensive internship program for BTech students in technology. Boost your career with hands-on experience and get placed in top companies like TCS, Cognizant, and Mindtree." />
-        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, BTech students, TCS, Cognizant, Mindtree" />
-        <meta property="og:title" content="3 Months Internship with NexGen | For BTech Students" />
-        <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for BTech students in technology. Get placed in top companies like TCS, Cognizant, and Mindtree." />
+        <title>3 Months Internship with NexGen | Training and Certificate for BTech Students</title>
+        <meta name="description" content="Join NexGen's 3-month comprehensive internship program for BTech students. Receive internship training, earn a certificate, and boost your career with hands-on experience in top companies like TCS, Cognizant, and Mindtree." />
+        <meta name="keywords" content="internship, technology, full-stack development, AI, ML, cloud computing, BTech students, TCS, Cognizant, Mindtree, 3-month program, internship certificate" />
+        <meta property="og:title" content="3 Months Internship with NexGen | Training and Certificate for BTech Students" />
+        <meta property="og:description" content="Join NexGen's 3-month comprehensive internship program for BTech students. Receive internship training, earn a certificate, and get placed in top companies like TCS, Cognizant, and Mindtree." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.nexgeninternship.com" />
         <meta property="og:image" content="https://www.nexgeninternship.com/og-image.jpg" />
