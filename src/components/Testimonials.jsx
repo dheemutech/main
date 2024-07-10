@@ -6,17 +6,17 @@ const Testimonials = () => {
     {
       name: "Mahesh Reddy",
       role: "Software Engineer at TCS",
-      content: "NexGen's 3-month internship program was a game-changer for my career. The hands-on experience and mentorship I received as a BTech student were invaluable in securing my position at TCS.",
+      content: "NexGen's 3-month internship program was a game-changer for my career. The intensive hands-on experience and mentorship I received as a BTech student were invaluable in securing my position at TCS just weeks after completion.",
     },
     {
       name: "Aakash Chowary",
       role: "Data Scientist at Cognizant",
-      content: "The AI and ML training I got during NexGen's comprehensive internship prepared me perfectly for my role at Cognizant. It's an excellent program for aspiring BTech graduates in tech.",
+      content: "The accelerated AI and ML training I got during NexGen's comprehensive 3-month internship prepared me perfectly for my role at Cognizant. It's an excellent program for aspiring BTech graduates looking to quickly enter the tech industry.",
     },
     {
       name: "Priya Sharma",
       role: "Frontend Developer at Mindtree",
-      content: "NexGen's focus on real-world projects and cutting-edge technologies gave me a significant advantage in my job search. The certified internship certificate was a great addition to my resume!",
+      content: "NexGen's focus on real-world projects and cutting-edge technologies in just 3 months gave me a significant advantage in my job search. The certified internship certificate was a great addition to my resume and helped me land my dream job!",
     }
   ];
 

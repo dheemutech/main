@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import AnimatedStats from '@/components/AnimatedStats';
+import CountdownTimer from '@/components/CountdownTimer';
 
 const HeroSection = () => {
   const handleApplyNow = () => {
@@ -20,7 +21,7 @@ const HeroSection = () => {
         <p className="text-xl text-white text-center mb-8">
           Transforming BTech Careers with Intensive Industry-Leading Training and Placements
         </p>
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-8">
           <Button
             size="lg"
             className="bg-white text-blue-600 hover:bg-blue-50 transition-colors"
@@ -29,6 +30,7 @@ const HeroSection = () => {
             Apply Now
           </Button>
         </div>
+        <CountdownTimer />
         <AnimatedStats />
       </div>
     </section>

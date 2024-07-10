@@ -53,10 +53,10 @@ export const AnimatedStats = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <p className="text-4xl font-bold text-blue-600 mb-2">
-              <AnimatedNumber value={85} duration={2} />
+              <AnimatedNumber value={90} duration={2} />
             </p>
             <p className="text-xl text-gray-700">Placement Rate for BTech Graduates</p>
-            <p className="text-sm text-gray-500 mt-2">Percentage of our graduates successfully placed in top tech companies</p>
+            <p className="text-sm text-gray-500 mt-2">Percentage of our graduates successfully placed within 3 months</p>
           </motion.div>
           <motion.div 
             className="text-center p-6 bg-green-50 rounded-lg"
@@ -64,10 +64,10 @@ export const AnimatedStats = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <p className="text-4xl font-bold text-green-600 mb-2">
-              <AnimatedNumber value={1000} duration={2} />
+              <AnimatedNumber value={500} duration={2} />
             </p>
             <p className="text-xl text-gray-700">BTech Students Trained</p>
-            <p className="text-sm text-gray-500 mt-2">Number of students who have completed our comprehensive program</p>
+            <p className="text-sm text-gray-500 mt-2">Number of students who have completed our intensive 3-month program</p>
           </motion.div>
           <motion.div 
             className="text-center p-6 bg-purple-50 rounded-lg"
@@ -97,7 +97,7 @@ export const AnimatedStats = () => {
         </div>
         <div className="mt-8 text-center">
           <p className="text-xl text-gray-700">
-            Our BTech graduates have been successfully placed in top companies, demonstrating the effectiveness of our program.
+            Our BTech graduates have been successfully placed in top companies after just 3 months of intensive training.
           </p>
         </div>
       </div>
