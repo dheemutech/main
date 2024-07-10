@@ -16,6 +16,9 @@ const HeroSection = () => {
         <p className="text-xl text-white text-center mb-10">
           Accelerate your career with our intensive program for BTech students
         </p>
+        <p className="text-lg text-white text-center mb-8">
+          Connect with 10+ leading tech companies and kickstart your career
+        </p>
         <div className="flex justify-center mb-12">
           <Button
             size="lg"

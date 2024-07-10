@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
-const AnimatedNumber = ({ value, duration }) => {
+const AnimatedNumber = ({ value, duration, isPlus }) => {
   const [currentValue, setCurrentValue] = useState(0);
   const ref = useRef(null);
   const inView = useInView(ref);
@@ -36,7 +36,7 @@ const AnimatedNumber = ({ value, duration }) => {
       animate={controls}
     >
       {currentValue}
-      {value === 1000 ? '+' : '%'}
+      {isPlus ? '+' : ''}
     </motion.span>
   );
 };
@@ -53,7 +53,7 @@ export const AnimatedStats = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <p className="text-4xl font-bold text-blue-600 mb-2">
-              <AnimatedNumber value={90} duration={2} />
+              <AnimatedNumber value={90} duration={2} />%
             </p>
             <p className="text-xl text-gray-700">Placement Rate for BTech Graduates</p>
             <p className="text-sm text-gray-500 mt-2">Percentage of our graduates successfully placed within 3 months</p>
@@ -64,7 +64,7 @@ export const AnimatedStats = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <p className="text-4xl font-bold text-green-600 mb-2">
-              <AnimatedNumber value={1000} duration={2} />
+              <AnimatedNumber value={1000} duration={2} isPlus={true} />
             </p>
             <p className="text-xl text-gray-700">BTech Students Trained</p>
             <p className="text-sm text-gray-500 mt-2">Number of students who have completed our intensive 3-months program</p>
@@ -75,10 +75,10 @@ export const AnimatedStats = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <p className="text-4xl font-bold text-purple-600 mb-2">
-              <AnimatedNumber value={50} duration={2} />
+              <AnimatedNumber value={10} duration={2} isPlus={true} />
             </p>
-            <p className="text-xl text-gray-700">Partner Companies</p>
-            <p className="text-sm text-gray-500 mt-2">Top tech companies collaborating with us for placements</p>
+            <p className="text-xl text-gray-700">Partner Connections</p>
+            <p className="text-sm text-gray-500 mt-2">Established partnerships with leading tech companies</p>
           </motion.div>
         </div>
         <div className="mt-12 text-center">
