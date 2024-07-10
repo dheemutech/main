@@ -39,32 +39,26 @@ const ProgramStructure = () => {
         <h2 className="text-4xl font-bold text-center mb-8">Program Structure</h2>
         <p className="text-center text-xl mb-12">Our comprehensive 3-month program is designed specifically for BTech students, preparing you for success at leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
         
-        <div className="relative">
-          {/* Timeline */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-200 h-full"></div>
-          
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {phases.map((phase, index) => (
             <motion.div 
               key={index}
-              className={`flex items-center mb-16 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="bg-white p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className={`bg-white p-6 rounded-lg shadow-lg w-full md:w-5/12 ${index % 2 === 0 ? 'mr-8' : 'ml-8'}`}>
-                <div className="flex flex-col items-center mb-4">
-                  {phase.icon}
-                  <h3 className="text-2xl font-semibold mb-2 text-center">{phase.title}</h3>
-                  <span className="text-lg font-medium text-gray-600">{phase.duration}</span>
-                </div>
-                <ul className="list-disc list-inside space-y-2">
-                  {phase.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-lg">{item}</li>
-                  ))}
-                </ul>
+              <div className="flex flex-col items-center mb-4">
+                {phase.icon}
+                <h3 className="text-2xl font-semibold mb-2 text-center">{phase.title}</h3>
+                <span className="text-lg font-medium text-gray-600">{phase.duration}</span>
               </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full"></div>
+              <ul className="list-disc list-inside space-y-2">
+                {phase.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="text-lg">{item}</li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
