@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
 const AnimatedNumber = ({ value, duration }) => {
+  const [currentValue, setCurrentValue] = useState(0);
   const ref = useRef(null);
   const inView = useInView(ref);
   const controls = useAnimation();
@@ -13,8 +14,20 @@ const AnimatedNumber = ({ value, duration }) => {
         y: 0,
         transition: { duration: 0.5 }
       });
+
+      let start = 0;
+      const end = parseInt(value);
+      const incrementTime = (duration / end) * 1000;
+
+      const timer = setInterval(() => {
+        start += 1;
+        setCurrentValue(start);
+        if (start === end) clearInterval(timer);
+      }, incrementTime);
+
+      return () => clearInterval(timer);
     }
-  }, [controls, inView]);
+  }, [controls, inView, value, duration]);
 
   return (
     <motion.span
@@ -22,13 +35,7 @@ const AnimatedNumber = ({ value, duration }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
     >
-      <motion.span
-        initial={{ value: 0 }}
-        animate={{ value: inView ? value : 0 }}
-        transition={{ duration }}
-      >
-        {({ value }) => Math.floor(value)}
-      </motion.span>
+      {currentValue}
       {value === 1000 ? '+' : '%'}
     </motion.span>
   );
