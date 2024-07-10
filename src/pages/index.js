@@ -5,8 +5,6 @@ import { Button } from '@/components/ui/button';
 import { motion, useAnimation } from 'framer-motion';
 import { FAQ } from '@/components/FAQ';
 import { ContactForm } from '@/components/ContactForm';
-import { useTheme } from 'next-themes';
-import { Sun, Moon } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import AnimatedStats from '@/components/AnimatedStats';
@@ -29,7 +27,6 @@ const LazyTestimonials = dynamic(() => import('@/components/Testimonials'), {
 const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false });
 
 export default function Home() {
-  const { theme, setTheme } = useTheme();
   const controls = useAnimation();
   const [mounted, setMounted] = useState(false);
 
@@ -84,20 +81,8 @@ export default function Home() {
         <link rel="canonical" href="https://www.nexgeninternship.com" />
       </Head>
 
-      {/* Theme Toggle */}
-      <div className="fixed top-4 right-4 z-50">
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
-        >
-          {mounted && (theme === 'dark' ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />)}
-        </Button>
-      </div>
-
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-800 dark:to-indigo-900 text-white py-24">
+      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-24">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-6xl font-bold mb-6"
@@ -155,17 +140,17 @@ export default function Home() {
       <FAQ />
 
       {/* Newsletter Signup Section */}
-      <section className="py-16 bg-blue-100 dark:bg-blue-900">
+      <section className="py-16 bg-blue-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">Stay Updated</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Stay Updated</h2>
           <NewsletterSignup />
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact" className="py-24 bg-white dark:bg-gray-800">
+      <section id="contact" className="py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 dark:text-white">Contact Us</h2>
+          <h2 className="text-4xl font-bold text-center mb-16">Contact Us</h2>
           <div className="max-w-md mx-auto">
             <ContactForm />
           </div>
@@ -173,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 dark:bg-blue-800 text-white py-24">
+      <section className="bg-blue-600 text-white py-24">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Start Your 3-Month Journey?</h2>
           <p className="text-xl mb-10">Join NexGen's Comprehensive Internship Program for BTech students and transform your career prospects with placements in TCS, Cognizant, and Mindtree.</p>
