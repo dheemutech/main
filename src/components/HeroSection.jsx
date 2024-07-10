@@ -1,23 +1,10 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import AnimatedStats from '@/components/AnimatedStats';
-import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   const handleApplyNow = () => {
-    window.gtag('event', 'apply_now_click', {
-      'event_category': 'Engagement',
-      'event_label': 'Hero Section Apply Now',
-    });
     window.open('https://forms.gle/T3mDS3MGaqFu84jz5', '_blank');
-  };
-
-  const handleLearnMore = () => {
-    window.gtag('event', 'learn_more_click', {
-      'event_category': 'Engagement',
-      'event_label': 'Hero Section Learn More',
-    });
-    document.getElementById('program-structure').scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -33,14 +20,6 @@ const HeroSection = () => {
             onClick={handleApplyNow}
           >
             Apply Now
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="bg-transparent text-white border-white hover:bg-white hover:text-blue-600 transition-colors"
-            onClick={handleLearnMore}
-          >
-            Learn More <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
         <AnimatedStats />
