@@ -9,7 +9,6 @@ import dynamic from 'next/dynamic';
 import NewsletterSignup from '@/components/NewsletterSignup';
 import AnimatedStats from '@/components/AnimatedStats';
 import CountdownTimer from '@/components/CountdownTimer';
-import FloatingCTA from '@/components/FloatingCTA';
 
 // Lazy load components
 const LazyProgramStructure = dynamic(() => import('@/components/ProgramStructure'), { 
@@ -185,9 +184,6 @@ export default function Home() {
 
       {/* Chat Widget */}
       <ChatWidget />
-
-      {/* Floating CTA */}
-      <FloatingCTA />
 
       {/* JSON-LD Schema Markup */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdScript) }} />
