@@ -21,7 +21,7 @@ const ProgramStructure = () => {
       "Intensive project presentations and feedback sessions"
     ]},
     { title: "Certification & Immediate Support", icon: <Award className="w-12 h-12 mb-4 text-yellow-600" />, duration: "Upon Completion", items: [
-      "Receive a certified 3-month internship certificate recognized by top tech companies",
+      "Receive a certified 3-months internship certificate recognized by top tech companies",
       "Rapid performance evaluation and personalized recommendation letter",
       "Immediate access to job placement support and industry connections"
     ]}
@@ -30,8 +30,8 @@ const ProgramStructure = () => {
   return (
     <section id="program-structure" className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">Intensive 3-Month Program Structure</h2>
-        <p className="text-center text-xl mb-12">Our accelerated 3-month program is meticulously designed to rapidly prepare BTech students for immediate success in leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
+        <h2 className="text-4xl font-bold text-center mb-8">Intensive 3-Months Program Structure</h2>
+        <p className="text-center text-xl mb-12">Our accelerated 3-months program is meticulously designed to rapidly prepare BTech students for immediate success in leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {phases.map((phase, index) => (
