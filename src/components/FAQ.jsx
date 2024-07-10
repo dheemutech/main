@@ -10,7 +10,7 @@ export const FAQ = () => {
   const faqItems = [
     {
       question: "What is the NexGen 3-Month Comprehensive Internship Program?",
-      answer: "The NexGen 3-Month Comprehensive Internship Program is an intensive training program designed specifically for BTech students in India. It enhances your skills and prepares you for internships and job opportunities in top tech companies like TCS, Cognizant, and Mindtree."
+      answer: "The NexGen 3-Month Comprehensive Internship Program is an intensive training program designed specifically for BTech students in India. It enhances your skills, provides hands-on training, and prepares you for internships and job opportunities in top tech companies like TCS, Cognizant, and Mindtree."
     },
     {
       question: "Who is eligible for this program?",
