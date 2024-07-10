@@ -10,7 +10,7 @@ export const FAQ = () => {
   const faqItems = [
     {
       question: "What is the NexGen 3-Month Comprehensive Internship Program?",
-      answer: "The NexGen 3-Month Comprehensive Internship Program is an intensive training program designed specifically for BTech students in India. It rapidly enhances your skills, provides hands-on training, and prepares you for internships and job opportunities in top tech companies like TCS, Cognizant, and Mindtree."
+      answer: "The NexGen 3-Month Comprehensive Internship Program is an intensive training program designed specifically for BTech students in India. It rapidly enhances your skills, provides hands-on training, and prepares you for internships and job opportunities in our 10+ partner tech companies, including industry leaders like TCS, Cognizant, and Mindtree."
     },
     {
       question: "Who is eligible for this program?",
@@ -18,23 +18,23 @@ export const FAQ = () => {
     },
     {
       question: "What technologies will I learn during the 3-month program?",
-      answer: "You'll gain intensive hands-on experience with full-stack development, Python, cloud computing, AI, and machine learning. We focus on technologies commonly used by leading Indian tech companies to keep you at the cutting edge."
+      answer: "You'll gain intensive hands-on experience with full-stack development, Python, cloud computing, AI, and machine learning. We focus on technologies commonly used by our partner companies to keep you at the cutting edge."
     },
     {
       question: "How does the AI interviewer work?",
-      answer: "Our AI interviewer uses advanced natural language processing to simulate real interview scenarios from top Indian tech companies like TCS, Cognizant, and Mindtree. It adapts to your responses, providing a realistic practice experience and feedback to prepare you quickly for actual interviews."
+      answer: "Our AI interviewer uses advanced natural language processing to simulate real interview scenarios from our partner companies. It adapts to your responses, providing a realistic practice experience and feedback to prepare you quickly for actual interviews."
     },
     {
       question: "Is there a job guarantee after completing the 3-month program?",
-      answer: "While we can't guarantee job placement, our intensive 3-month program significantly enhances your chances. Many of our BTech graduates have successfully secured positions at top tech companies like TCS, Cognizant, and Mindtree shortly after completing the program."
+      answer: "While we can't guarantee job placement, our intensive 3-month program significantly enhances your chances. Many of our BTech graduates have successfully secured positions at our partner companies shortly after completing the program."
     },
     {
       question: "What kind of projects will I work on?",
-      answer: "You'll work on a variety of fast-paced projects, including a capstone project where you'll apply your skills in AI, ML, and full-stack development to solve real-world problems relevant to the Indian tech industry, particularly focusing on challenges faced by companies like TCS, Cognizant, and Mindtree."
+      answer: "You'll work on a variety of fast-paced projects, including a capstone project where you'll apply your skills in AI, ML, and full-stack development to solve real-world problems relevant to our partner companies in the Indian tech industry."
     },
     {
       question: "Tell me more about the certified internship certificate.",
-      answer: "Upon successful completion of the 3-month program, you'll receive a certified internship certificate. This certificate is recognized by leading tech companies and serves as a valuable credential on your resume, significantly boosting your job prospects in companies like TCS, Cognizant, and Mindtree."
+      answer: "Upon successful completion of the 3-month program, you'll receive a certified internship certificate. This certificate is recognized by our 10+ partner companies and serves as a valuable credential on your resume, significantly boosting your job prospects."
     },
     {
       question: "How much does the 3-month program cost?",
@@ -42,7 +42,7 @@ export const FAQ = () => {
     },
     {
       question: "Can I participate in the program while studying full-time?",
-      answer: "Yes, the 3-month program is designed to be intensive but flexible, allowing BTech students to complete it alongside their full-time studies. However, you should be prepared to dedicate significant time and effort to get the most out of the program and prepare for opportunities at top Indian tech companies."
+      answer: "Yes, the 3-month program is designed to be intensive but flexible, allowing BTech students to complete it alongside their full-time studies. However, you should be prepared to dedicate significant time and effort to get the most out of the program and prepare for opportunities at our partner tech companies."
     }
   ];
 

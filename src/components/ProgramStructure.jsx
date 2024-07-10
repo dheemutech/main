@@ -10,20 +10,20 @@ const ProgramStructure = () => {
       "Fast-track introduction to AI and machine learning fundamentals"
     ]},
     { title: "Phase 2: Career Preparation Sprint", icon: <Brain className="w-12 h-12 mb-4 text-green-600" />, duration: "4 weeks", items: [
-      "High-intensity resume building workshop tailored for top tech companies",
+      "High-intensity resume building workshop tailored for our 10+ partner companies",
       "Rapid-fire AI-powered interview practice sessions",
       "Condensed soft skills and Indian corporate culture training",
-      "Fast-track mentorship sessions with industry experts"
+      "Fast-track mentorship sessions with industry experts from leading tech companies"
     ]},
     { title: "Phase 3: Project Application Blitz", icon: <Rocket className="w-12 h-12 mb-4 text-purple-600" />, duration: "4 weeks", items: [
       "Agile capstone project development addressing real industry challenges",
       "Daily mentor check-ins and rapid iteration cycles",
-      "Intensive project presentations and feedback sessions"
+      "Intensive project presentations and feedback sessions with partner company representatives"
     ]},
     { title: "Certification & Immediate Support", icon: <Award className="w-12 h-12 mb-4 text-yellow-600" />, duration: "Upon Completion", items: [
-      "Receive a certified 3-months internship certificate recognized by top tech companies",
+      "Receive a certified 3-months internship certificate recognized by our 10+ partner tech companies",
       "Rapid performance evaluation and personalized recommendation letter",
-      "Immediate access to job placement support and industry connections"
+      "Immediate access to job placement support and connections with our partner companies"
     ]}
   ];
 
@@ -31,7 +31,7 @@ const ProgramStructure = () => {
     <section id="program-structure" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-8">Intensive 3-Months Program Structure</h2>
-        <p className="text-center text-xl mb-12">Our accelerated 3-months program is meticulously designed to rapidly prepare BTech students for immediate success in leading Indian tech companies like TCS, Cognizant, and Mindtree.</p>
+        <p className="text-center text-xl mb-12">Our accelerated 3-months program is meticulously designed to rapidly prepare BTech students for immediate success in our 10+ partner tech companies, including industry leaders like TCS, Cognizant, and Mindtree.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {phases.map((phase, index) => (
