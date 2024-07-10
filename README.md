@@ -12,3 +12,38 @@ pnpm dev
 # or
 bun dev
 ```
+
+## Project Structure
+
+This project uses Next.js 14 with the Pages Router. It includes the following main components:
+
+- Header
+- Footer
+- AnimatedStats
+- ProgramStructure
+- Features
+- Testimonials
+- FAQ
+- ContactForm
+- NewsletterSignup
+- ChatWidget
+
+The main page is located in `src/pages/index.js`.
+
+## Styling
+
+This project uses Tailwind CSS for styling. The main configuration for Tailwind is in `tailwind.config.js` and `src/styles/globals.css`.
+
+## Components
+
+The project uses components from the shadcn/ui library. These components are located in `src/components/ui/`.
+
+## Note on Theme
+
+As per recent updates, the dark mode feature has been removed from this project. The application now uses a consistent light theme across all pages and components.
+
+## Additional Information
+
+For more information on how to use Next.js, check out the [Next.js Documentation](https://nextjs.org/docs).
+
+For any project-specific questions or issues, please contact the project maintainers.
