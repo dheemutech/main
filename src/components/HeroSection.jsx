@@ -24,7 +24,7 @@ const HeroSection = () => {
     <section className="bg-gradient-to-r from-blue-600 to-indigo-700 py-20">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-8 text-white text-center leading-tight">
-          NexGen 3-Month Internship Program for BTech Students - 3-Month Internship with nexgen
+          3-Month Internship with nexgen
         </h1>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
           <Button
