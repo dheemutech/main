@@ -64,7 +64,7 @@ export const AnimatedStats = () => {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <p className="text-4xl font-bold text-green-600 mb-2">
-              <AnimatedNumber value={500} duration={2} />
+              <AnimatedNumber value={1000} duration={2} />
             </p>
             <p className="text-xl text-gray-700">BTech Students Trained</p>
             <p className="text-sm text-gray-500 mt-2">Number of students who have completed our intensive 3-month program</p>
